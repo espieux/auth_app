@@ -1,5 +1,5 @@
 {
-  "name": "hackerhouse_basic",
+  "name": "auth-app",
   "image": "ghcr.io/dfinity/icp-dev-env:12",
   "forwardPorts": [4943, 8080],
   "portsAttributes": {
@@ -12,8 +12,7 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "onCreateCommand": "nohup bash -c 'scripts/setup.sh &'",
-  "postCreateCommand": "",
+  "onCreateCommand": "chmod +x scripts/setup.sh && nohup bash -c 'scripts/setup.sh'",
   "postAttachCommand": "([ -f nohup.out ] && (cat nohup.out && rm nohup.out)) || exit 0",
   "customizations": {
     "vscode": {

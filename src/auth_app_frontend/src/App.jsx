@@ -46,7 +46,7 @@ function App() {
       await initAuthClient();
     }
 
-    const identity_url = `http://${process.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:8080`;
+    const identity_url = `http://${process.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943`;
     console.log(`Logging in with identity URL: ${identity_url}`);
 
     await new Promise((resolve) =>
