@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "auth_app_backend": {
+      "main": "src/auth_app_backend/main.mo",
+      "type": "motoko"
+    },
+    "auth_app_frontend": {
+      "dependencies": [
+        "auth_app_backend"
+      ],
+      "source": [
+        "src/auth_app_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "auth_app_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
